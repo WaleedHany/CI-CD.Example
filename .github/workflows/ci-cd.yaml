@@ -18,7 +18,7 @@ jobs:
           dotnet-version: '7.0.x'
 
       - name: Restore depemdencies 🛠
-        run: dotnet Restore AnimalCountingDatabase.Api\AnimalCountingDatabase.Api.csproj
+        run: dotnet Restore
 
       - name: Build application 🚀
-        run: dotnet build AnimalCountingDatabase.Api\AnimalCountingDatabase.Api.csproj -c Release 
+        run: dotnet build -c Release 
