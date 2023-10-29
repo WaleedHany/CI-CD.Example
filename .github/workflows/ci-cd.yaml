@@ -22,3 +22,6 @@ jobs:
 
       - name: Build application 🚀
         run: dotnet build -c Release 
+
+      - name: Run automated tests 🧪
+        run: dotnet tests -c Release
