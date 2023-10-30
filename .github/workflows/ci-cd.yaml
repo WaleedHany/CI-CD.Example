@@ -15,7 +15,8 @@ jobs:
       - name: Setup .net 7
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '7.0.x'
+          dotnet-version: '7.0.103'
+          include-prerelease: true
 
       - name: Restore depemdencies 🛠
         run: dotnet Restore
@@ -27,11 +28,11 @@ jobs:
         run: dotnet test -c Release
 
       - name: Publish app 📰
-        run: dotnet publish ./AnimalCountingDatabase.Api/AnimalCountingDatabase.Api.csproj
+        run: dotnet publish -c Release -o ./out
 
       - name: Deploy to Azure Web Apps 🚢
         uses: azure/webapps-deploy@v2
         with: 
           app-name: waleed-first-webapp
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUPLISH_SECRET }}
-          package: ./AnimalCountingDatabase.Api/AnimalCountingDatabase.Api.csproj
+          package: ./out 
