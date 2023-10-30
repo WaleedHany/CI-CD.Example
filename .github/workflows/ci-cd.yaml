@@ -27,11 +27,11 @@ jobs:
         run: dotnet test -c Release
 
       - name: Publish app 📰
-        run: dotnet publish -c Release --property:PublishDir=AnimalCountingDatabase.Api/AnimalCountingDatabase.Api.csproj
+        run: dotnet publish -c Release -o ./out/AnimalCountingDatabase.Api/AnimalCountingDatabase.Api.csproj
 
       - name: Deploy to Azure Web Apps 🚢
         uses: azure/webapps-deploy@v3
         with: 
           app-name: waleed-first-webapp
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUPLISH_SECRET }}
-          package: PublishDir
+          package: ./out/AnimalCountingDatabase.Api/AnimalCountingDatabase.Api.csproj
