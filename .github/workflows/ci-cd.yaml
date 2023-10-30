@@ -3,7 +3,7 @@ name: Continous integration and develpment
 on:
   push:
     branches:
-      - main
+      - main  
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
       - name: Restore depemdencies 🛠
         run: dotnet Restore
 
-      - name: Build application 🚀
+      - name: Build application 🚀 
         run: dotnet build -c Release 
 
       - name: Run automated tests 🧪
