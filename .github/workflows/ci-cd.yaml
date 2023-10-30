@@ -27,7 +27,7 @@ jobs:
         run: dotnet test -c Release
 
       - name: Publish app 📰
-        run: dotnet publish -c Release -o ./out
+        run: dotnet publish -c Release -o ./out/AnimalsCountingDatabase.Api
 
       - name: Deploy to Azure Web Apps 🚢
         uses: azure/webapps-deploy@v2
