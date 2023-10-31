@@ -35,4 +35,3 @@ jobs:
           app-name: waleed-first-webapp
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUPLISH_SECRET }} 
           package: ./out
-
