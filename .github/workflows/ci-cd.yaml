@@ -34,5 +34,4 @@ jobs:
         with: 
           app-name: waleed-first-webapp
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUPLISH_SECRET }}
-          package: ./AnimalCountingDatabase.Api
 
