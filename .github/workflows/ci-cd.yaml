@@ -30,7 +30,7 @@ jobs:
         run: dotnet nuget locals all --clear
 
       - name: Publish app 📰
-        run: dotnet publish -c Release ./AnimalCountingDatabase.Api/AnimalCountingDatabase.Api.csproj  --output ./out
+        run: dotnet publish -c Release ./AnimalCountingDatabase.Api/AnimalCountingDatabase.Api.csproj --output ./out
 
       - name: Deploy to Azure Web Apps 🚢
         uses: azure/webapps-deploy@v2
