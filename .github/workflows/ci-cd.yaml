@@ -26,7 +26,7 @@ jobs:
           path: |
             ~/.nuget/packages
             ~/.local/share/NuGet
-          key: ${{ runner.os }}-dotnet-${{ hashFiles('**/*.csproj') }}
+          key: ${{ runner.os }}-dotnet-${{ hashFiles('**/*.csproj') }} 
           restore-keys: |
             ${{ runner.os }}-dotnet-
           options: |
