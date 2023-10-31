@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Check out code 🔔
         uses: actions/checkout@v4
-
+ 
       - name: Setup .net 7
         uses: actions/setup-dotnet@v3
         with:
