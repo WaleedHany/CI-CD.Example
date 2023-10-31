@@ -33,7 +33,7 @@ jobs:
             max-age=120 
 
       - name: Build application 🚀
-        run: dotnet build -c Release 
+        run: dotnet build -c Release ./AnimalCountingDatabase.Api/AnimalCountingDatabase.Api.csproj
 
       - name: Run automated tests 🧪
         run: dotnet test -c Release
