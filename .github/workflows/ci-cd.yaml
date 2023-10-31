@@ -30,8 +30,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-dotnet-
           options: |
-            max-age=86400  # Cache will expire after 1 day (in seconds)
-            
+            max-age=120 
+
       - name: Build application 🚀
         run: dotnet build -c Release 
 
