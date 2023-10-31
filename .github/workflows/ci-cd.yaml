@@ -20,6 +20,18 @@ jobs:
       - name: Restore depemdencies 🛠
         run: dotnet Restore
 
+      - name: Clear .NET Cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.nuget/packages
+            ~/.local/share/NuGet
+          key: ${{ runner.os }}-dotnet-${{ hashFiles('**/*.csproj') }}
+          restore-keys: |
+            ${{ runner.os }}-dotnet-
+          options: |
+            max-age=86400  # Cache will expire after 1 day (in seconds)
+            
       - name: Build application 🚀
         run: dotnet build -c Release 
 
