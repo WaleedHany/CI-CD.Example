@@ -27,7 +27,7 @@ jobs:
         run: dotnet test -c Release
 
       - name: Publish app 📰
-        run: dotnet publish ./AnimalCountingDatabase.Api/AnimalCountingDatabase.Api.csproj -c Release --property:PublishDir=./publish
+        run: dotnet publish ./AnimalCountingDatabase.Api/AnimalCountingDatabase.Api.csproj -c Release --property PublishDir=./publish
 
       - name: Deploy to Azure Web Apps 🚢
         uses: azure/webapps-deploy@v2
